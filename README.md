@@ -10,10 +10,13 @@ Le projet concerne pour le moment la troisième version des règles de *GURPS*. 
 
 ## Comment produire le PDF ? ##
 Le projet est accompagné d'un Makefile à la racine, lequel fait appel à un second Makefile situé dans les répertoire des sources, `tex`. Les multiples passes de LaTeX nécessaires sont pilotées par `latexmk`, lequel est fourni avec la plupart des distributions *TeX*. Ainsi, pour produire le PDF, il suffit, depuis le répertoire racine, de taper :
+```sh    
     make
+```
 Le PDF, GURPS-milesChristi.pdf, peut alors être trouvé dans le répertoire `pdf`. Pour nettoyer les fichiers de sorties et les fichiers temporaires, ainsi que le PDF, il suffit, toujours depuis le répertoire racine, de taper :
+```sh
     make clean
-
+```
 ## Quelle version de TeX est nécessaire ? ##
 Outre les classiques packages `babel`, `geometry` ou `fontenc`, certains packages moins utilisés sont également mis à profit, comme `supertabular`, `varioref` ou `colortbl`. Le plus simple aujourd'hui reste ainsi sûrement d'utiliser la distribution [TeXLive](http://www.tug.org/texlive). La version 2012 de celle-ci a été utilisée pour réaliser l'adaptation. Elle contient tous les packages nécessaires.
 
