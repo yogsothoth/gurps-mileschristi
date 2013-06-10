@@ -1,0 +1,42 @@
+\documentclass[a4paper, 10pt, headsepline, footsepline]{scrbook}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{textcomp}
+\usepackage{array}
+\usepackage[section]{placeins}
+\usepackage{supertabular}
+\usepackage{colortbl}
+\usepackage[style=authoryear,citestyle=alphabetic,sorting=nty]{biblatex} 
+\defbibnote{gurps}{Bibliographie des ouvrages GURPS}
+\defbibnote{mileschristi}{Bibliographie historique sur la période du XIIème siècle}
+\addbibresource{../../GURPS-biblio}
+\addbibresource{../../mileschristi-biblio}
+\usepackage[french]{varioref}
+\usepackage{titleref}
+\usepackage{makeidx}
+
+\newcommand{\gurpstitle}[1]{\textsl{\textbf{#1}}}
+\newcommand{\gmc}{\gurpstitle{GURPS miles Christi}}
+
+\title{GURPS miles Christi}
+\author{Nicolas Herry}
+\date{Juin 2012}
+
+\makeindex
+
+\begin{document}
+\maketitle
+\tableofcontents
+\frontmatter
+\include{chap-introduction}
+\mainmatter
+\include{chap-personnage}
+\printbibheading
+\printbibliography[heading=subbibliography, keyword=gurps,title={Ouvrages GURPS}]
+\printbibliography[heading=subbibliography, keyword=mileschristi,title={Ouvrages miles Christi}]
+\printbibliography[heading=subbibliography, keyword=histoire,title={Livres de référence historique}]
+\printindex
+\end{document}
